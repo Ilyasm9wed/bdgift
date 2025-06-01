@@ -1,0 +1,136 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffffff, #a64ca6); /* white to purple */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(128, 0, 128, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+/* H1 Styling */
+h1 {
+  font-size: 40px;
+  color: darkpurple;
+  color: #4b0082;
+  font-style: italic;
+  text-shadow: 3px 3px 8px black;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 30px;
+}
+
+/* Paragraph Styling */
+.insta-text, .note {
+  font-size: 18px;
+  margin: 30px auto;
+  padding: 20px;
+  color: #4b0082;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.insta-logo {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Username and Password */
+.username,
+.password {
+  border: 3px solid #4b0082;
+  color: #4b0082;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), inset 0 0 10px #800080;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.6);
+  transition: transform 0.4s ease, background 0.4s;
+  max-width: 600px;
+  position: relative;
+}
+
+.username:hover,
+.password:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* Heart Sparkle */
+.username::after,
+.password::after {
+  content: " 💜";
+  animation: pulse 1.5s infinite;
+}
+
+/* Fire Spark styles */
+#fire-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fire {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff69b4;
+  box-shadow: 0 0 10px #ff00ff, 0 0 15px pink;
+  animation: fire-explode 1.2s ease-out forwards;
+}
+
+/* Star background animation for paragraph */
+.insta-text::before {
+  content: "✨✨✨✨✨✨✨✨✨✨";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0.4;
+  pointer-events: none;
+  animation: star-drift 6s infinite linear;
+}
+
+@keyframes star-drift {
+  0% { transform: translateY(0); opacity: 0.3; }
+  50% { transform: translateY(10px); opacity: 0.6; }
+  100% { transform: translateY(0); opacity: 0.3; }
+}
+
+/* Fire animation */
+@keyframes fire-explode {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.4) translate(var(--x), var(--y));
+    opacity: 0;
+  }
+}
+
+/* Pulse hearts */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}

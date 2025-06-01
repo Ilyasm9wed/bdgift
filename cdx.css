@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fddde6, #fde1f0);
+  color: #333;
+}
+
+.hero {
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 30px;
+  font-size: 16px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.text-box {
+  max-width: 500px;
+}
+
+.text-box h1 {
+  font-size: 48px;
+  color: #d6336c;
+  margin-bottom: 20px;
+}
+
+.text-box p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.text-box button {
+  padding: 12px 24px;
+  background: #f06292;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.text-box button:hover {
+  background: #e91e63;
+}
+
+.graphics {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  margin: 50px auto;
+  background: linear-gradient(135deg, #fff0f5, #ffe6eb);
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Common image style */
+.graphics img {
+  position: absolute;
+  width: 110px;
+  height: auto;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Corner Positions */
+
+/* Top Left */
+.top-left.img1 {
+  top: 20px;
+  left: 20px;
+  transform: rotate(-10deg);
+}
+
+.top-left.img2 {
+  top: 80px;
+  left: 500px;
+  transform: rotate(-5deg);
+}
+
+/* Top Right */
+.top-right.img1 {
+  top: 20px;
+  right: -20px;
+  transform: rotate(-5deg);
+}
+
+.top-right.img2 {
+  top: 90px;
+  right: 60px;
+  transform: rotate(5deg);
+}
+
+/* Bottom Left */
+.bottom-left.img1 {
+  bottom: 20px;
+  left: 20px;
+  transform: rotate(-5deg);
+}
+
+.bottom-left.img2 {
+  bottom: 90px;
+  left: 60px;
+  transform: rotate(-10deg);
+}
+
+/* Bottom Right */
+.bottom-right.img1 {
+  bottom: 20px;
+  right: 20px;
+  transform: rotate(5deg);
+}
+
+.bottom-right.img2 {
+  bottom: 100px;.center-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold;
+  color: #e60073;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 5px #ffb6c1;
+  z-index: 5;
+}
+@media (max-width: 768px) {
+  .graphics img {
+    width: 70px;
+  }
+
+  .center-message {
+    font-size: 22px;
+  }
+}
+
+  right: 60px;
+  transform: rotate(10deg);
+}
+
+/* Hover Effect */
+.graphics img:hover {
+  transform: scale(1.1) rotate(0deg);
+  filter: drop-shadow(0 0 15px #ff7fbf);
+  z-index: 2;
+}
+
+
+.heart {
+  position: absolute;
+  width: 300px;
+  top: 0;
+  left: 100px;
+  z-index: 1;
+}
+
+.gift {
+  position: absolute;
+  width: 100px;
+  z-index: 2;
+}
+
+.gift1 {
+  bottom: 0;
+  left: 0;
+}
+
+.gift2 {
+  bottom: 0;
+  right: 50px;
+}
+
+.tag {
+  position: absolute;
+  width: 120px;
+  bottom: 60px;
+  left: 180px;
+  z-index: 3;
+}
+/* Container styling */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to top right, #fff0f5, #ffe4ec);
+  padding: 40px;
+  font-family: 'Georgia', serif;
+}
+
+/* Text box */
+.text-box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 700px;
+  box-shadow: 0 20px 40px rgba(255, 105, 180, 0.2);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Heart and flower decorations around h1 */
+.text-box h1 {
+  font-style: italic;
+  font-size: 40px;
+  color: #c2185b;
+  text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.4);
+  position: relative;
+  margin-bottom: 30px;
+  transition: all 0.4s ease;
+}
+
+.text-box h1::before,
+.text-box h1::after {
+  content: "🌹❤️";
+  position: absolute;
+  font-size: 24px;
+  top: -10px;
+}
+
+.text-box h1::before {
+  left: -40px;
+}
+
+.text-box h1::after {
+  right: -40px;
+}
+
+/* Stars and sparkles animation for p */
+.text-box p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #7c1c4a;
+  position: relative;
+  background: url('https://cdn-icons-png.flaticon.com/512/616/616430.png') repeat;
+  background-size: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  animation: sparkles 3s infinite ease-in-out;
+  transition: all 0.4s ease;
+}
+
+@keyframes sparkles {
+  0%, 100% { background-position: 0 0; }
+  50% { background-position: 10px 10px; }
+}
+
+/* Button styling */
+.text-box button {
+  margin-top: 25px;
+  background: #ff69b4;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease;
+}
+
+.text-box button:hover {
+  background: #e60073;
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(230, 0, 115, 0.6);
+}
+.text-box button:active {
+  transform: scale(0.95);
+  background: #c2185b;
+}
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(to right, #ffe4e1, #fff0f5);
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  position: relative;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 12px 24px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.navbar li:hover {
+  transform: scale(1.1);
+}
+
+/* Link style */
+.navbar a {
+  text-decoration: none;
+  color: #c2185b;
+  position: relative;
+  z-index: 1;
+}
+
+/* FIRE SPARK EFFECT (First year) */
+.year1 .spark {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: orange;
+  border-radius: 50%;
+  animation: fire 1s infinite ease-in-out;
+  box-shadow: 0 0 10px orange, 0 0 20px red;
+}
+
+@keyframes fire {
+  0%, 100% { transform: translate(-50%, 0) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -20px) scale(1.5); opacity: 0.5; }
+}
+
+/* FLYING HEART (Second year) */
+.year2 .heart {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 20px;
+  animation: floatHeart 3s infinite ease-in-out;
+}
+
+@keyframes floatHeart {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-20px); opacity: 0.6; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* BUTTERFLY (Third year) */
+.year3 .butterfly {
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  font-size: 20px;
+  animation: flutter 4s infinite;
+}
+
+@keyframes flutter {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, -5px) rotate(10deg); }
+  50% { transform: translate(0, -10px) rotate(-10deg); }
+  75% { transform: translate(-5px, -5px) rotate(5deg); }
+}
+
+/* GIFT (Fourth year) */
+.year4 .gift {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  font-size: 22px;
+  animation: bounceGift 2s infinite;
+}
+
+@keyframes bounceGift {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+

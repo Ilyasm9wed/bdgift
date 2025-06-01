@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background:  #c2185b;;
+  color: #333;
+}
+
+.top-banner {
+  background: #b80f3f;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #b80f3f;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  color: #ff4f81;
+  font-size: 1.5em;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color:crimson;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffe4ec, #ffc2d1);
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  color: #d6336c;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #ff4f81;
+  border: none;
+  color: white;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.cards-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 200px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card p {
+  padding: 10px;
+  font-weight: bold;
+  color: #d6336c;
+}
+
+.love-note {
+  background: #ffe6f0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.love-note h2 {
+  color: #ff4f81;
+  margin-bottom: 20px;
+}
+
+.love-note button {
+  background: #ff4f81;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ffccd5;
+  border-radius: 8px;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background: #ff4f81;
+  color: white;
+  border: none;
+  border-radius: 30px;
+}
+
+footer {
+  background: #ff4f81;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+/* Base styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff0f5;
+  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+  font-size: 1.8em;
+  color: #ff4f81;
+  font-weight: bold;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 1em;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Common styles for all li */
+.navbar ul li {
+  position: relative;
+  font-style: italic;
+}
+
+/* Home - with a flower */
+.home-love a {
+  color: red;
+  border: 2px solid transparent;
+}
+.home-love::before {
+  content: "🌸";
+  position: absolute;
+  left: -20px;
+  top: -10px;
+  animation: floatFlower 3s infinite ease-in-out;
+}
+@keyframes floatFlower {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* First year - with spark stars */
+.stars-year a {
+  color: red;
+  position: relative;
+}
+.stars-year::after {
+  content: "✨✨";
+  position: absolute;
+  right: -25px;
+  top: -10px;
+  animation: twinkle 2s infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Second year - with butterflies */
+.butterfly-year a {
+  color: red;
+}
+.butterfly-year::before {
+  content: "🦋";
+  position: absolute;
+  left: -20px;
+  animation: flyButterfly 4s infinite linear;
+}
+@keyframes flyButterfly {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Third year - with heart */
+.heart-year a {
+  color: red;
+}
+.heart-year::before {
+  content: "❤️";
+  position: absolute;
+  left: -18px;
+  top: -5px;
+  animation: pulseHeart 1.5s infinite;
+}
+@keyframes pulseHeart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+/* Fourth year - with swan */
+.swan-year a {
+  color: red;
+}
+.swan-year::after {
+  content: "🦢";
+  position: absolute;
+  right: -22px;
+  top: 0;
+  animation: glideSwan 3s infinite ease-in-out;
+}
+@keyframes glideSwan {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+/* For you */
+.for-you a {
+  color: #d6336c;
+  font-weight: bold;
+}

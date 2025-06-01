@@ -1,0 +1,50 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: radial-gradient(circle at top left, #ffdde1, #ee9ca7);
+  color: #40011f;
+  padding: 50px 20px;
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glowing heart pulse animation */
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Carousel Style */
+.carousel {
+  position: relative;
+  max-width: 400px;
+  margin: 40px auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 0, 102, 0.4);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.carousel img {
+  width: 100%;
+  display: block;
+  border-radius: 24px;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Nav buttons */
+.nav {
+  position: absolute;
+}
